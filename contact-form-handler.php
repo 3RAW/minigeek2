@@ -1,23 +1,32 @@
 <?php
-	$name = $_POST['fname'];
-	$visitor_email = $_POST['email'];
-	$message = $_POST['message'];
-	
-	
-	$email_from = 'Mini@geek.com';
-	
-	$email_subject = "New Form Submission";
-	
-	$email_body = "User Name: $name. \n".
-					"User Email: $visitor_email.\n".
-						"User Message: $message, \n";
-	
-	$to = "raphaelwreford@hotmail.com";
-	
-	$headers = "From: $email_from \r \n";
-	
-	$headers. "Reply To: $visitor_email \r \n";
-	
-	mail($to, $email_subject, $email_body, $headers);
-	
-	header("Location: index.html"):
+$field_name = $_POST['cf_name'];
+$field_email = $_POST['cf_email'];
+$field_message = $_POST['cf_message'];
+
+$mail_to = 'raphaelwreford@hotmail.com';
+$subject = 'Your Subject'.$field_name;
+
+$body_message = 'From: '.$field_name."\n";
+$body_message .= 'E-mail: '.$field_email."\n";
+$body_message .= 'Message: '.$field_message;
+
+$headers = 'From: '.$field_email."\r\n";
+$headers .= 'Reply-To: '.$field_email."\r\n";
+
+$mail_status = mail($mail_to, $subject, $body_message, $headers);
+
+if ($mail_status) { ?>
+	<script language="javascript" type="text/javascript">
+		alert('Sucess Message');
+		window.location = 'index.html';
+	</script>
+<?php
+}
+else { ?>
+	<script language="javascript" type="text/javascript">
+		alert('Error Message');
+		window.location = 'index.html';
+	</script>
+<?php
+}
+?>
