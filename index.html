@@ -168,17 +168,17 @@
 
             
 
-            <form method="post" form action="contact-form-handler.php" class="p-5 bg-white">
+            <form method="post" form action="https://formspree.io/mpzyagda" class="p-5 bg-white">
              
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control">
+                  <input type="text" name="fname" class="form-control">
                 </div>
                 <div class="col-md-6">
                   <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control">
+                  <input type="text" name="lname" class="form-control">
                 </div>
               </div>
 
@@ -186,7 +186,7 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control">
+                  <input type="email" name="email" class="form-control">
                 </div>
               </div>
 
@@ -194,14 +194,14 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="subject">Subject</label> 
-                  <input type="subject" id="subject" class="form-control">
+                  <input type="subject" name="subject" class="form-control">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="text-black" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                  <textarea name="message" name="message" cols="30" rows="7" class="form-control"></textarea>
                 </div>
               </div>
 
@@ -213,15 +213,6 @@
 
   
             </form>
-	<form method="post" action="contact.php">
-	<label for="name">Name:</label>
-	<input type="text" class="text" name="cf_name" id="name" />
-	<label for="email">email:</label>
-	<input type="text" class="text" name="cf_email" id="email" />
-	<label for="text">Message:</label>
-	<textarea class="text" name="cf_message" id="message"></textarea>
-	<input type="submit" class="submit" value="Send" />
-	</form>
           </div>
           <div class="col-md-5">
             
